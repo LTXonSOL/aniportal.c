@@ -1,6 +1,6 @@
 # AniPortal.Live
 
-![AniPortal Logo](https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png)
+![AniPortal Logo](https://i.postimg.cc/rw5Wcty7/1760131976052.png)
 
 Welcome to **AniPortal.Live** – your ultimate destination to watch anime online.  
 
