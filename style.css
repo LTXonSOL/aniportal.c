@@ -144,6 +144,29 @@ h1, h2, h3, h4, h5, h6, p, span, button {
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
 }
 
+/* ----------------- Footer ----------------- */
+#siteFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(255, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 0, 0, 0.2);
+    z-index: 2000;
+    pointer-events: none; /* verhindert Klicks auf Footer */
+}
+
+#siteFooter span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* ----------------- Player Modal ----------------- */
 #playerModal {
     display: none;
