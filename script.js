@@ -22,62 +22,164 @@ const series = [
       },
       {
         name: "Staffel 2",
-        episodes: [
-          { title: "Ep | 1", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 2", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 3", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 4", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 5", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 6", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 7", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 8", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 9", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 10", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 11", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 12", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 13", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 14", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 15", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 16", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 17", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 18", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 19", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 20", stream: "https://streamtape.com/e/STREAM-LINK-HIER" } 
-        ]
+        episodes: Array.from({length: 20}, (_, i) => ({ 
+          title: `Ep | ${i + 1}`, 
+          stream: "https://streamtape.com/e/STREAM-LINK-HIER" 
+        }))
       }
     ]
   },
 
-  // Beispiel für zweite Serie (Platzhalter)
+  // Platzhalter-Serie 2
   {
     name: "Serie 2",
-    thumbnail: "https://i.postimg.cc/POSTIMAGE-THUMBNAIL.png",
+    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
     seasons: [
       {
         name: "Staffel 1",
-        episodes: [
-          { title: "Ep | 1", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 2", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 3", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 4", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 5", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 6", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 7", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 8", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 9", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 10", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 11", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 12", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 13", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 14", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 15", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 16", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 17", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 18", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 19", stream: "https://streamtape.com/e/STREAM-LINK-HIER" },
-          { title: "Ep | 20", stream: "https://streamtape.com/e/STREAM-LINK-HIER" }
-        ]
+        episodes: Array.from({length: 20}, (_, i) => ({
+          title: `Ep | ${i + 1}`,
+          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
+        }))
+      },
+      {
+        name: "Staffel 2",
+        episodes: Array.from({length: 20}, (_, i) => ({
+          title: `Ep | ${i + 1}`,
+          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
+        }))
+      }
+    ]
+  },
+
+  // Platzhalter-Serie 3
+  {
+    name: "Serie 3",
+    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
+    seasons: [
+      {
+        name: "Staffel 1",
+        episodes: Array.from({length: 20}, (_, i) => ({
+          title: `Ep | ${i + 1}`,
+          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
+        }))
+      }
+    ]
+  },
+
+  // Platzhalter-Serie 4
+  {
+    name: "Serie 4",
+    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
+    seasons: [
+      {
+        name: "Staffel 1",
+        episodes: Array.from({length: 20}, (_, i) => ({
+          title: `Ep | ${i + 1}`,
+          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
+        }))
+      }
+    ]
+  },
+
+  // Platzhalter-Serie 5
+  {
+    name: "Serie 5",
+    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
+    seasons: [
+      {
+        name: "Staffel 1",
+        episodes: Array.from({length: 20}, (_, i) => ({
+          title: `Ep | ${i + 1}`,
+          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
+        }))
       }
     ]
   }
 ];
+
+// ----------------------------
+// Serienanzeige
+// ----------------------------
+function showSeries(list, containerId = "results") {
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+
+  list.forEach(anime => {
+    const div = document.createElement("div");
+    div.classList.add("anime-card");
+    div.innerHTML = `
+      <img src="${anime.thumbnail}" alt="${anime.name}">
+      <h3>${anime.name}</h3>
+    `;
+    div.onclick = () => showEpisodes(anime);
+    container.appendChild(div);
+  });
+}
+
+// ----------------------------
+// Zufällige Serien auf Startseite (5 Stück)
+// ----------------------------
+function showRandomSeries() {
+  const containerId = "results";
+  const shuffled = [...series].sort(() => 0.5 - Math.random());
+  const randomFive = shuffled.slice(0, 5);
+  showSeries(randomFive, containerId);
+}
+
+// ----------------------------
+// Suchfunktion
+// ----------------------------
+document.getElementById("search").addEventListener("input", function() {
+  const query = this.value.toLowerCase();
+  const filtered = series.filter(s => s.name.toLowerCase().includes(query));
+
+  if (query.length === 0) {
+    document.getElementById("results").innerHTML = "";
+    return;
+  }
+
+  showSeries(filtered);
+});
+
+// ----------------------------
+// Episodenanzeige
+// ----------------------------
+function showEpisodes(anime) {
+  const container = document.getElementById("results");
+  container.innerHTML = `<h2>${anime.name}</h2>`;
+
+  anime.seasons.forEach(season => {
+    const seasonDiv = document.createElement("div");
+    seasonDiv.innerHTML = `<h3>${season.name}</h3>`;
+    season.episodes.forEach(ep => {
+      const btn = document.createElement("button");
+      btn.textContent = ep.title;
+      btn.onclick = () => openPlayer(ep.stream);
+      seasonDiv.appendChild(btn);
+    });
+    container.appendChild(seasonDiv);
+  });
+}
+
+// ----------------------------
+// Player
+// ----------------------------
+function openPlayer(url) {
+  const modal = document.getElementById("playerModal");
+  const player = document.getElementById("videoPlayer");
+  player.src = url;
+  modal.style.display = "block";
+}
+
+function closePlayer() {
+  const modal = document.getElementById("playerModal");
+  const player = document.getElementById("videoPlayer");
+  player.src = "";
+  modal.style.display = "none";
+}
+
+// ----------------------------
+// Initiale Anzeige
+// ----------------------------
+window.onload = showRandomSeries;
