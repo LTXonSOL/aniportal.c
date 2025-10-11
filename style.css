@@ -1,87 +1,146 @@
+/* ----------------- Grundlayout ----------------- */
 body {
     font-family: Arial, sans-serif;
-    background: #0d0d0d;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
     color: #fff;
-    text-align:center;
-    margin:0;
-    padding:0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* Leichter animierter Hintergrundeffekt */
+    background-size: 200% 200%;
+    animation: subtleGradient 15s ease infinite;
 }
 
+@keyframes subtleGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ----------------- Header ----------------- */
 header {
     padding: 40px 0;
 }
 
 #logo {
-    max-width: 200px;
-    margin-bottom:20px;
+    max-width: 150px; /* 25% kleiner */
+    height: auto;
+    margin-bottom: 20px;
 }
 
+/* ----------------- Suchleiste ----------------- */
 input[type="text"] {
     width: 80%;
-    max-width:400px;
-    padding:10px;
-    font-size:16px;
-    border-radius:5px;
-    border:none;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
 
+/* ----------------- Seriencontainer ----------------- */
 .results {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content:center;
-    margin-top:20px;
-    gap:20px;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
 }
 
-.series {
-    background:#1a1a1a;
-    padding:10px;
-    border-radius:8px;
-    width:150px;
-    cursor:pointer;
+/* Serienkarten */
+.anime-card {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    width: 90px; /* ca. 40% kleiner */
+    cursor: pointer;
+    border: 1px solid rgba(255, 0, 0, 0.2); /* sehr dezente rote Umrandung */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.series img {
-    width:100%;
-    border-radius:5px;
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
+/* Thumbnails */
+.anime-card img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ----------------- Zufällige Serien auf Startseite ----------------- */
+#randomSeries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+#randomSeries .anime-card {
+    width: 110px; /* etwas größer für Highlight */
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+#randomSeries .anime-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+/* ----------------- Text-Glow ----------------- */
+h1, h2, h3, h4, h5, h6, p, span, button {
+    text-shadow: 0 0 2px rgba(255, 0, 0, 0.3);
+}
+
+/* ----------------- Episoden ----------------- */
 .episodes {
-    margin-top:10px;
-    text-align:left;
+    margin-top: 10px;
+    text-align: left;
 }
 
 .episode {
-    background:#333;
-    margin:2px 0;
-    padding:5px;
-    border-radius:4px;
-    cursor:pointer;
-    font-size:14px;
+    background: #333;
+    margin: 2px 0;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
+.episode:hover {
+    background: #444;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+/* ----------------- Player Modal ----------------- */
 #playerModal {
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.95);
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 #playerModal iframe {
-    width:90%;
-    height:80%;
+    width: 90%;
+    height: 80%;
 }
 
 #playerModal .close {
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:30px;
-    cursor:pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
 }
