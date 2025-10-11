@@ -29,8 +29,7 @@ const series = [
       }
     ]
   },
-
-  // Platzhalter-Serie 2
+  // Platzhalter-Serien
   {
     name: "Serie 2",
     thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
@@ -44,51 +43,6 @@ const series = [
       },
       {
         name: "Staffel 2",
-        episodes: Array.from({length: 20}, (_, i) => ({
-          title: `Ep | ${i + 1}`,
-          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
-        }))
-      }
-    ]
-  },
-
-  // Platzhalter-Serie 3
-  {
-    name: "Serie 3",
-    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
-    seasons: [
-      {
-        name: "Staffel 1",
-        episodes: Array.from({length: 20}, (_, i) => ({
-          title: `Ep | ${i + 1}`,
-          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
-        }))
-      }
-    ]
-  },
-
-  // Platzhalter-Serie 4
-  {
-    name: "Serie 4",
-    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
-    seasons: [
-      {
-        name: "Staffel 1",
-        episodes: Array.from({length: 20}, (_, i) => ({
-          title: `Ep | ${i + 1}`,
-          stream: "https://streamtape.com/e/STREAM-LINK-HIER"
-        }))
-      }
-    ]
-  },
-
-  // Platzhalter-Serie 5
-  {
-    name: "Serie 5",
-    thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
-    seasons: [
-      {
-        name: "Staffel 1",
         episodes: Array.from({length: 20}, (_, i) => ({
           title: `Ep | ${i + 1}`,
           stream: "https://streamtape.com/e/STREAM-LINK-HIER"
@@ -147,18 +101,23 @@ document.getElementById("search").addEventListener("input", function() {
 // ----------------------------
 function showEpisodes(anime) {
   const container = document.getElementById("results");
-  container.innerHTML = `<h2>${anime.name}</h2>`;
+  container.innerHTML = `<h2>${anime.name}</h2><div class="episodes-container"></div>`;
+  const episodesContainer = container.querySelector(".episodes-container");
 
   anime.seasons.forEach(season => {
     const seasonDiv = document.createElement("div");
+    seasonDiv.classList.add("season");
     seasonDiv.innerHTML = `<h3>${season.name}</h3>`;
+    
     season.episodes.forEach(ep => {
       const btn = document.createElement("button");
+      btn.classList.add("episode");
       btn.textContent = ep.title;
       btn.onclick = () => openPlayer(ep.stream);
       seasonDiv.appendChild(btn);
     });
-    container.appendChild(seasonDiv);
+
+    episodesContainer.appendChild(seasonDiv);
   });
 }
 
@@ -169,7 +128,7 @@ function openPlayer(url) {
   const modal = document.getElementById("playerModal");
   const player = document.getElementById("videoPlayer");
   player.src = url;
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }
 
 function closePlayer() {
