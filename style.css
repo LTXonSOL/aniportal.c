@@ -1,25 +1,41 @@
 /* ----------------- Grundlayout ----------------- */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    background: #0d0d0d;
     color: #fff;
     text-align: center;
     margin: 0;
     padding: 0;
-    /* Leichter animierter Hintergrundeffekt */
-    background-size: 200% 200%;
-    animation: subtleGradient 15s ease infinite;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes subtleGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* ----------------- Leichte bewegte Punkte ----------------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.6) 1px, transparent 1px);
+    background-size: 15px 15px; /* Abstand zwischen den Punkten */
+    pointer-events: none;
+    z-index: 0;
+    animation: moveDots 60s linear infinite;
+    opacity: 0.2; /* sehr dezent */
+}
+
+@keyframes moveDots {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
 }
 
 /* ----------------- Header ----------------- */
 header {
     padding: 40px 0;
+    position: relative;
+    z-index: 1; /* über den Punkten */
 }
 
 #logo {
@@ -37,6 +53,8 @@ input[type="text"] {
     border-radius: 5px;
     border: none;
     outline: none;
+    position: relative;
+    z-index: 1;
 }
 
 /* ----------------- Seriencontainer ----------------- */
@@ -46,6 +64,8 @@ input[type="text"] {
     justify-content: center;
     margin-top: 20px;
     gap: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Serienkarten */
@@ -57,6 +77,8 @@ input[type="text"] {
     cursor: pointer;
     border: 1px solid rgba(255, 0, 0, 0.2); /* sehr dezente rote Umrandung */
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
 }
 
 .anime-card:hover {
@@ -79,6 +101,8 @@ input[type="text"] {
     justify-content: center;
     gap: 25px;
     margin-top: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 #randomSeries .anime-card {
@@ -95,6 +119,8 @@ input[type="text"] {
 /* ----------------- Text-Glow ----------------- */
 h1, h2, h3, h4, h5, h6, p, span, button {
     text-shadow: 0 0 2px rgba(255, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 /* ----------------- Episoden ----------------- */
@@ -143,4 +169,5 @@ h1, h2, h3, h4, h5, h6, p, span, button {
     right: 30px;
     font-size: 30px;
     cursor: pointer;
+    z-index: 1001;
 }
