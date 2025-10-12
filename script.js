@@ -29,7 +29,6 @@ const series = [
       }
     ]
   },
-  // Platzhalter-Serien
   {
     name: "Serie 2",
     thumbnail: "https://i.postimg.cc/VsbHMDKR/Design-ohne-Titel-20251010-234756-0000.png",
@@ -52,9 +51,7 @@ const series = [
   }
 ];
 
-// ----------------------------
-// Serienanzeige
-// ----------------------------
+
 function showSeries(list, containerId = "results") {
   const container = document.getElementById(containerId);
   container.innerHTML = "";
@@ -71,9 +68,7 @@ function showSeries(list, containerId = "results") {
   });
 }
 
-// ----------------------------
-// Zufällige Serien auf Startseite (5 Stück)
-// ----------------------------
+
 function showRandomSeries() {
   const containerId = "results";
   const shuffled = [...series].sort(() => 0.5 - Math.random());
@@ -81,9 +76,7 @@ function showRandomSeries() {
   showSeries(randomFive, containerId);
 }
 
-// ----------------------------
-// Suchfunktion
-// ----------------------------
+
 document.getElementById("search").addEventListener("input", function() {
   const query = this.value.toLowerCase();
   const filtered = series.filter(s => s.name.toLowerCase().includes(query));
@@ -96,9 +89,7 @@ document.getElementById("search").addEventListener("input", function() {
   showSeries(filtered);
 });
 
-// ----------------------------
-// Episodenanzeige
-// ----------------------------
+
 function showEpisodes(anime) {
   const container = document.getElementById("results");
   container.innerHTML = `<h2>${anime.name}</h2><div class="episodes-container"></div>`;
@@ -121,9 +112,7 @@ function showEpisodes(anime) {
   });
 }
 
-// ----------------------------
-// Player
-// ----------------------------
+
 function openPlayer(url) {
   const modal = document.getElementById("playerModal");
   const player = document.getElementById("videoPlayer");
@@ -138,7 +127,5 @@ function closePlayer() {
   modal.style.display = "none";
 }
 
-// ----------------------------
-// Initiale Anzeige
-// ----------------------------
+
 window.onload = showRandomSeries;
