@@ -1,6 +1,7 @@
 {
   "name": "AniPortal",
   "short_name": "AniPortal",
+  "description": "AniPortal.live – Deine kostenlose Anime-Streaming-Seite mit neuesten Serien in hoher Qualität.",
   "start_url": "https://aniportal.live/",
   "display": "standalone",
   "background_color": "#121212",
