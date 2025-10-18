@@ -19,6 +19,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- PWA Meta-Tags für Fullscreen -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#121212">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
   <link rel="stylesheet" href="style.css">
 
   <!-- Google tag (gtag.js) -->
@@ -51,16 +58,11 @@
 
   <!-- Support & Werbung Hinweis -->
   <div style="text-align:center; margin-top:20px; color:#bbb; font-size:13px; line-height:1.5;">
-    <!-- Dünne dunkelrote Linie über dem Support -->
     <div style="border-top: 1px solid #550000; margin-bottom:10px;"></div>
-
-    <!-- Kontaktanzeige -->
     <div style="margin-bottom:5px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap; font-size:14px;">
         <span>📞 <a href="https://wa.me/6283121040571" style="color:#bbb; text-decoration:none;">WhatsApp: +62 831-2104-0571</a></span>
         <span>📧 <a href="mailto:info@aniportal.live" style="color:#bbb; text-decoration:none;">E-Mail: info@aniportal.live</a></span>
     </div>
-
-    <!-- Werbung Hinweis -->
     <div style="font-size:12px; color:#888; margin-bottom:8px;">Werbung 😉🤭</div>
   </div>
 
@@ -81,28 +83,23 @@
   <!-- Responsive Anpassung -->
   <style>
     @media screen and (max-width: 768px) {
-      /* Ad responsive */
       div[style*="width:100%; text-align:center;"] iframe {
         width: 100% !important;
         height: auto !important;
       }
-      /* Support Text etwas kleiner */
       div[style*="text-align:center; margin-top:20px;"] {
         font-size: 12px !important;
         margin-top: 15px !important;
         margin-bottom: 15px !important;
       }
-      /* Kontaktanzeige schöner auf Handys */
       div[style*="display:flex; justify-content:center; gap:15px;"] {
         flex-direction: column;
         gap:5px;
         align-items: center;
       }
-      /* Werbung Hinweis Abstand anpassen */
       div[style*="font-size:12px; color:#888; margin-bottom:8px;"] {
         margin-top: 5px !important;
       }
-      /* Ad Bereich minimaler Abstand */
       div[style*="margin-top:5px; margin-bottom:20px;"] {
         margin-top: 10px !important;
         margin-bottom: 15px !important;
